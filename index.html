@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>جامعہ اسلامیہ معہد الابرار | Jamia Islamia Mahadul Abrar</title>
+<meta name="description" content="جامعہ اسلامیہ معہد الابرار — دینی و اسلامی تعلیم کا مرکز۔ Jamia Islamia Mahadul Abrar — an Islamic seminary for Qur'anic and religious education, established 2015.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --green-deep:#0c3a24;
+  --green-primary:#155c37;
+  --green-bright:#1f7a4a;
+  --gold:#c79a3f;
+  --gold-light:#e4c274;
+  --maroon:#7c1f2e;
+  --cream:#f8f4e9;
+  --paper:#fdfbf5;
+  --ink:#1c2420;
+  --ink-soft:#4b5750;
+  --line:#dcd4bf;
+  --radius:2px;
+  --shadow:0 10px 30px rgba(12,58,36,0.10);
+}
+
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:'Source Serif 4', serif;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+html[dir="rtl"] body{font-family:'Noto Nastaliq Urdu','Source Serif 4',serif; line-height:2.1;}
+
+h1,h2,h3,h4{
+  font-family:'Playfair Display', serif;
+  margin:0 0 .4em 0;
+  color:var(--green-deep);
+  font-weight:600;
+  letter-spacing:.2px;
+}
+html[dir="rtl"] h1, html[dir="rtl"] h2, html[dir="rtl"] h3, html[dir="rtl"] h4{
+  font-family:'Noto Nastaliq Urdu', serif;
+  font-weight:700;
+  line-height:1.9;
+}
+p{margin:0 0 1em 0; color:var(--ink-soft);}
+a{color:inherit; text-decoration:none;}
+img{max-width:100%; display:block;}
+ul{margin:0;padding:0;list-style:none;}
+button{font-family:inherit; cursor:pointer;}
+.container{max-width:1160px; margin:0 auto; padding:0 28px;}
+.section-tag{
+  display:inline-block;
+  color:var(--maroon);
+  font-size:.8rem;
+  margin-bottom:10px;
+  font-family:'Playfair Display', serif;
+  font-style:italic;
+}
+html[dir="rtl"] .section-tag{font-family:'Noto Nastaliq Urdu',serif; font-style:normal; font-size:1.02rem;}
+
+.divider{
+  width:64px; height:3px; background:var(--gold);
+  margin:14px 0 26px 0; border-radius:2px;
+}
+.center .divider{margin-inline:auto;}
+
+/* ===== HEADER ===== */
+header{
+  position:sticky; top:0; z-index:100;
+  background:var(--paper);
+  border-bottom:1px solid var(--line);
+  transition:box-shadow .25s ease, background .25s ease;
+}
+header.scrolled{box-shadow:0 4px 18px rgba(12,58,36,.08);}
+.nav-wrap{
+  display:flex; align-items:center; justify-content:space-between;
+  padding:12px 0;
+  gap:20px;
+}
+.brand{display:flex; align-items:center; gap:12px;}
+.brand img{width:52px; height:52px; border-radius:50%;}
+.brand-name{display:flex; flex-direction:column; line-height:1.15;}
+.brand-name .en{font-family:'Playfair Display',serif; font-size:.95rem; font-weight:600; color:var(--green-deep);}
+.brand-name .ur{font-family:'Noto Nastaliq Urdu',serif; font-size:1.15rem; color:var(--maroon); font-weight:700;}
+
+nav.primary-nav ul{display:flex; gap:28px; align-items:center;}
+nav.primary-nav a{
+  font-family:'Playfair Display', serif;
+  font-size:.92rem;
+  color:var(--ink);
+  position:relative;
+  padding:4px 0;
+}
+html[dir="rtl"] nav.primary-nav a{font-family:'Noto Nastaliq Urdu',serif; font-size:1.05rem;}
+nav.primary-nav a::after{
+  content:""; position:absolute; bottom:-3px; left:0; right:0; height:2px;
+  background:var(--gold); transform:scaleX(0); transform-origin:center;
+  transition:transform .25s ease;
+}
+nav.primary-nav a:hover::after, nav.primary-nav a.active::after{transform:scaleX(1);}
+
+.header-actions{display:flex; align-items:center; gap:14px;}
+.lang-toggle{
+  border:1px solid var(--green-primary);
+  background:transparent;
+  color:var(--green-primary);
+  padding:7px 14px;
+  border-radius:20px;
+  font-size:.82rem;
+  font-weight:600;
+  letter-spacing:.3px;
+}
+.lang-toggle:hover{background:var(--green-primary); color:#fff;}
+.btn{
+  display:inline-block;
+  padding:11px 26px;
+  border-radius:2px;
+  font-family:'Playfair Display',serif;
+  font-size:.9rem;
+  font-weight:600;
+  border:1px solid transparent;
+  transition:all .2s ease;
+}
+html[dir="rtl"] .btn{font-family:'Noto Nastaliq Urdu',serif; font-size:1.02rem;}
+.btn-gold{background:var(--gold); color:var(--green-deep);}
+.btn-gold:hover{background:var(--gold-light);}
+.btn-outline{border-color:#ffffff88; color:#fff;}
+.btn-outline:hover{background:#ffffff18;}
+.btn-line{border-color:var(--green-primary); color:var(--green-primary);}
+.btn-line:hover{background:var(--green-primary); color:#fff;}
+
+.menu-btn{display:none; background:none; border:none; flex-direction:column; gap:5px; padding:6px;}
+.menu-btn span{width:24px; height:2px; background:var(--green-deep); display:block;}
+
+/* ===== HERO ===== */
+.hero{
+  position:relative;
+  background:var(--green-deep);
+  color:#fff;
+  overflow:hidden;
+  
+  padding:86px 0 96px 0;
+}
+.hero-bg-scroll{
+  position:absolute; inset:0; z-index:0; overflow:hidden;
+}
+.hero-marquee-track{
+  display:flex; gap:14px; width:max-content; height:100%;
+  animation:heroScroll 60s linear infinite;
+}
+.hero-marquee-track img{
+  height:100%; width:660px; object-fit:cover; flex:0 0 auto; opacity:0.9;
+}
+@keyframes heroScroll{
+  from{transform:translateX(0);}
+  to{transform:translateX(-50%);}
+}
+html[dir="rtl"] .hero-marquee-track{animation-name:heroScrollRtl;}
+@keyframes heroScrollRtl{
+  from{transform:translateX(0);}
+  to{transform:translateX(50%);}
+}
+@media (prefers-reduced-motion: reduce){
+  .hero-marquee-track{animation:none;}
+}
+.hero-overlay{
+  position:absolute; inset:0; z-index:1;
+  background:
+    linear-gradient(160deg, rgba(12,58,36,0.93) 0%, rgba(21,92,55,0.90) 55%, rgba(18,63,40,0.94) 100%);
+}
+.hero-overlay::before{
+  content:"";
+  position:absolute; inset:0;
+  background-image:
+    repeating-linear-gradient(45deg, rgba(255,255,255,0.035) 0 2px, transparent 2px 26px),
+    repeating-linear-gradient(-45deg, rgba(255,255,255,0.035) 0 2px, transparent 2px 26px);
+}
+.hero-inner{position:relative; z-index:2; text-align:center; max-width:760px; margin:0 auto;}
+.hero-logo{
+  width:118px; height:118px; border-radius:50%;
+  margin:0 auto 26px auto;
+  border:3px solid var(--gold);
+  box-shadow:0 0 0 8px rgba(199,154,63,0.12);
+  opacity:0; transform:translateY(14px);
+  animation:riseIn .8s ease forwards;
+}
+.hero-ur-name{
+  font-family:'Noto Nastaliq Urdu', serif;
+  font-size:2.7rem;
+  font-weight:700;
+  color:#fff;
+  margin:0 0 6px 0;
+  opacity:0; transform:translateY(14px);
+  animation:riseIn .8s ease .15s forwards;
+}
+.hero-en-name{
+  font-family:'Playfair Display', serif;
+  font-style:italic;
+  font-size:1.15rem;
+  letter-spacing:.4px;
+  color:var(--gold-light);
+  margin-bottom:20px;
+  opacity:0; transform:translateY(14px);
+  animation:riseIn .8s ease .3s forwards;
+}
+.hero-tagline{
+  font-size:1.02rem;
+  color:#e9efe9;
+  max-width:520px; margin:0 auto 30px auto;
+  opacity:0; transform:translateY(14px);
+  animation:riseIn .8s ease .45s forwards;
+}
+.hero-badges{
+  display:flex; justify-content:center; gap:14px; flex-wrap:wrap;
+  margin-bottom:34px;
+  opacity:0; transform:translateY(14px);
+  animation:riseIn .8s ease .6s forwards;
+}
+.badge{
+  border:1px solid rgba(255,255,255,0.35);
+  padding:7px 16px; border-radius:20px; font-size:.82rem;
+  color:#fff; background:rgba(255,255,255,0.06);
+}
+.badge b{color:var(--gold-light);}
+.hero-ctas{
+  display:flex; gap:16px; justify-content:center; flex-wrap:wrap;
+  opacity:0; transform:translateY(14px);
+  animation:riseIn .8s ease .75s forwards;
+}
+@keyframes riseIn{to{opacity:1; transform:translateY(0);}}
+@media (prefers-reduced-motion: reduce){
+  .hero-logo,.hero-ur-name,.hero-en-name,.hero-tagline,.hero-badges,.hero-ctas{animation:none; opacity:1; transform:none;}
+}
+
+/* ===== ABOUT ===== */
+.about{padding:96px 0; background:var(--paper);}
+.about-grid{
+  display:grid; grid-template-columns:1.05fr .95fr; gap:64px; align-items:center;
+}
+.about-copy p{max-width:52ch;}
+.about-frame{
+  border:1px solid var(--line);
+  background:var(--cream);
+  padding:38px;
+  position:relative;
+  border-radius:2px;
+}
+.about-frame::before,.about-frame::after{
+  content:""; position:absolute; width:26px; height:26px;
+  border:2px solid var(--gold);
+}
+.about-frame::before{top:-1px; left:-1px; border-width:2px 0 0 2px; inset-inline-start:-1px;}
+.about-frame::after{bottom:-1px; right:-1px; border-width:0 2px 2px 0; inset-inline-end:-1px;}
+.about-frame blockquote{
+  font-family:'Playfair Display',serif;
+  font-style:italic;
+  color:var(--green-deep);
+  font-size:1.12rem;
+  border-inline-start:3px solid var(--gold);
+  padding-inline-start:18px;
+  margin:0 0 22px 0;
+}
+html[dir="rtl"] .about-frame blockquote{font-family:'Noto Nastaliq Urdu',serif; font-style:normal; font-size:1.4rem;}
+
+.stats{display:grid; grid-template-columns:repeat(4,1fr); gap:24px; margin-top:70px;}
+.stat{text-align:center; border-inline-start:1px solid var(--line); padding-inline-start:22px;}
+.stat:first-child{border-inline-start:none; padding-inline-start:0;}
+.stat .num{
+  font-family:'Playfair Display',serif; font-weight:700;
+  font-size:2.4rem; color:var(--green-primary);
+}
+.stat .num::after{content:"+";}
+.stat .lbl{font-size:.85rem; color:var(--ink-soft); margin-top:4px;}
+html[dir="rtl"] .stat .lbl{font-family:'Noto Nastaliq Urdu',serif; font-size:1rem;}
+
+/* ===== DEPARTMENTS ===== */
+.departments{padding:96px 0; background:var(--green-deep); color:#fff; position:relative;}
+.departments .section-tag{color:var(--gold-light);}
+.departments h2{color:#fff;}
+.dep-head{max-width:640px; margin-bottom:56px;}
+.dep-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:2px; background:rgba(255,255,255,0.14);}
+.dep-card{
+  background:var(--green-deep);
+  padding:34px 30px;
+  transition:background .25s ease;
+}
+.dep-card:hover{background:#0a2f1d;}
+.dep-icon{
+  width:46px; height:46px; border:1px solid var(--gold);
+  border-radius:50%; display:flex; align-items:center; justify-content:center;
+  margin-bottom:20px; color:var(--gold-light); font-size:1.2rem;
+}
+.dep-card h3{color:#fff; font-size:1.15rem; margin-bottom:8px;}
+.dep-card .ur-sub{
+  font-family:'Noto Nastaliq Urdu',serif; color:var(--gold-light); font-size:1.05rem;
+  display:block; margin-bottom:10px;
+}
+.dep-card p{color:#cfe0d3; font-size:.92rem; margin-bottom:0;}
+
+/* ===== WHY US ===== */
+.why{padding:96px 0;}
+.why-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:36px; margin-top:50px;}
+.why-item{text-align:start;}
+.why-num{
+  font-family:'Playfair Display',serif; font-size:.85rem; color:var(--gold);
+  border-bottom:1px solid var(--line); display:inline-block; padding-bottom:6px; margin-bottom:16px; letter-spacing:1px;
+}
+.why-item h4{font-size:1.05rem; margin-bottom:8px;}
+.why-item p{font-size:.92rem;}
+
+/* ===== ADMISSION ===== */
+.admission{padding:96px 0; background:var(--cream); border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
+.adm-grid{display:grid; grid-template-columns:.85fr 1.15fr; gap:70px;}
+.adm-steps{margin-top:30px; display:flex; flex-direction:column; gap:22px;}
+.adm-step{display:flex; gap:16px; align-items:flex-start;}
+.adm-step .n{
+  flex:0 0 auto; width:34px; height:34px; border-radius:50%;
+  background:var(--green-primary); color:#fff; display:flex; align-items:center; justify-content:center;
+  font-family:'Playfair Display',serif; font-size:.9rem; font-weight:600;
+}
+.adm-step h4{margin-bottom:4px; font-size:1rem;}
+.adm-step p{font-size:.9rem; margin-bottom:0;}
+
+form.adm-form{
+  background:#fff; border:1px solid var(--line); padding:38px; box-shadow:var(--shadow);
+}
+.form-row{display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-bottom:18px;}
+.field{display:flex; flex-direction:column; gap:6px;}
+.field.full{grid-column:1/-1;}
+.field label{font-size:.82rem; color:var(--ink-soft); font-family:'Playfair Display',serif;}
+html[dir="rtl"] .field label{font-family:'Noto Nastaliq Urdu',serif; font-size:.98rem;}
+.field input, .field select, .field textarea{
+  border:1px solid var(--line); padding:11px 12px; font-family:inherit; font-size:.95rem;
+  background:var(--paper); color:var(--ink); border-radius:2px;
+}
+.field input:focus, .field select:focus, .field textarea:focus{
+  outline:2px solid var(--green-primary); outline-offset:1px; border-color:var(--green-primary);
+}
+.field textarea{resize:vertical; min-height:88px;}
+.form-msg{
+  margin-top:16px; padding:12px 16px; border-radius:2px; font-size:.9rem; display:none;
+}
+.form-msg.show{display:block;}
+.form-msg.ok{background:#e5f3ea; color:var(--green-deep); border:1px solid #b9dfc4;}
+.form-msg.err{background:#fbe9e9; color:var(--maroon); border:1px solid #f0c3c3;}
+.adm-form 
+.submit-row{
+    display:flex;
+    justify-content:left; 
+    margin-top:6px;
+    ;
+}
+html[dir="rtl"] .adm-form .submit-row{justify-content:flex-start;}
+
+/* ===== DONATION ===== */
+.donation{
+  padding:96px 0;
+  background:var(--green-deep);
+  color:#fff;
+  position:relative;
+}
+.donation .section-tag{color:var(--gold-light);}
+.donation h2{color:#fff;}
+.donation-grid{display:grid; grid-template-columns:1fr .8fr; gap:60px; align-items:center;}
+.donation p{color:#cfe0d3;}
+.donation-points{margin-top:26px; display:flex; flex-direction:column; gap:16px;}
+.donation-point{display:flex; gap:14px; align-items:flex-start;}
+.donation-point .dot{
+  width:8px; height:8px; border-radius:50%; background:var(--gold);
+  margin-top:9px; flex:0 0 auto;
+}
+.donation-point p{margin:0; font-size:.93rem; color:#e2ecE4;}
+.qr-card{
+  background:#fff; padding:30px; border-radius:2px; text-align:center;
+  box-shadow:0 18px 40px rgba(0,0,0,0.28);
+  max-width:320px; margin-inline:auto;
+}
+.qr-card img{width:100%; max-width:230px; margin:0 auto 18px auto; border:1px solid var(--line);}
+.qr-card h4{color:var(--green-deep); font-size:1rem; margin-bottom:6px;}
+.qr-card p{color:var(--ink-soft); font-size:.85rem; margin-bottom:0;}
+
+/* ===== CONTACT ===== */
+.contact{padding:96px 0;}
+.contact-grid{display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:start;}
+.contact-list{display:flex; flex-direction:column; gap:26px; margin-top:30px;}
+.contact-item{display:flex; gap:16px; align-items:flex-start;}
+.contact-item .ic{
+  width:42px; height:42px; border-radius:50%; background:var(--green-primary); color:#fff;
+  display:flex; align-items:center; justify-content:center; flex:0 0 auto; font-size:1rem;
+}
+.contact-item h4{margin-bottom:2px; font-size:1rem;}
+.contact-item p{margin-bottom:0; font-size:.92rem;}
+.map-block{
+  background:var(--green-deep); color:#fff;
+  border:1px solid var(--line); position:relative; overflow:hidden;
+}
+.map-block iframe{
+  width:100%; height:300px; border:0; display:block; filter:grayscale(15%) contrast(1.05);
+}
+.map-caption{
+  padding:22px 26px; display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap;
+}
+.map-caption p{margin:0; color:#dcebe0; font-size:.88rem;}
+.map-caption .btn{padding:9px 18px; font-size:.82rem; white-space:nowrap;}
+
+/* ===== FOOTER ===== */
+footer{background:#0a2f1d; color:#cfe0d3; padding:60px 0 26px 0;}
+.footer-grid{display:grid; grid-template-columns:1.3fr 1fr 1fr; gap:50px; margin-bottom:44px;}
+.footer-brand{display:flex; gap:14px; align-items:flex-start;}
+.footer-brand img{width:56px; height:56px; border-radius:50%;}
+.footer-brand h4{color:#fff; font-size:1.05rem; margin-bottom:4px;}
+.footer-brand .ur{font-family:'Noto Nastaliq Urdu',serif; color:var(--gold-light); font-size:1.15rem; margin-bottom:6px; display:block;}
+.footer-brand p{font-size:.87rem; color:#a9c2af; margin:0;}
+footer h5{color:#fff; font-family:'Playfair Display',serif; font-size:.95rem; margin-bottom:16px;}
+html[dir="rtl"] footer h5{font-family:'Noto Nastaliq Urdu',serif; font-size:1.1rem;}
+footer ul li{margin-bottom:10px; font-size:.9rem;}
+footer ul a:hover{color:#fff;}
+.footer-bottom{
+  border-top:1px solid rgba(255,255,255,0.12); padding-top:22px;
+  display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px; font-size:.82rem; color:#8fab97;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width:960px){
+  .about-grid, .adm-grid, .contact-grid{grid-template-columns:1fr; gap:40px;}
+  .stats{grid-template-columns:repeat(2,1fr); row-gap:30px;}
+  .stat{border-inline-start:none !important; padding-inline-start:0 !important;}
+  .dep-grid{grid-template-columns:1fr 1fr;}
+  .why-grid{grid-template-columns:1fr 1fr;}
+  .footer-grid{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:720px){
+  nav.primary-nav{
+    position:fixed; inset:64px 0 auto 0; background:var(--paper);
+    border-bottom:1px solid var(--line);
+    padding:20px 28px 26px 28px; transform:translateY(-130%); transition:transform .3s ease;
+    box-shadow:0 12px 24px rgba(0,0,0,.08);
+  }
+  nav.primary-nav.open{transform:translateY(0);}
+  nav.primary-nav ul{flex-direction:column; align-items:flex-start; gap:16px;}
+  .menu-btn{display:flex;}
+  .header-actions .btn-line{display:none;}
+  .hero-ur-name{font-size:2.1rem;}
+  .dep-grid{grid-template-columns:1fr;}
+  .why-grid{grid-template-columns:1fr;}
+  .form-row{grid-template-columns:1fr;}
+  .footer-grid{grid-template-columns:1fr; gap:30px;}
+}
+</style>
+</head>
+<body>
+
+<!-- ===================== HEADER ===================== -->
+<header id="siteHeader">
+  <div class="container nav-wrap">
+    <div class="brand">
+      <img src="logo .jpg" alt="Jamia Islamia Mahadul Abrar Logo">
+      <div class="brand-name">
+        <span class="ur" data-i18n="brand_ur">جامعہ اسلامیہ معہد الابرار، ناندیڑ</span>
+        <br>
+        <span class="en" data-i18n="brand_en">Jamia Islamia Mahadul Abrar, Nanded</span>
+      </div>
+    </div>
+
+    <nav class="primary-nav" id="primaryNav">
+      <ul>
+        <li><a href="#home" class="active" data-i18n="nav_home">ہوم</a></li>
+        <li><a href="#about" data-i18n="nav_about">تعارف</a></li>
+        <li><a href="#departments" data-i18n="nav_departments">شعبہ جات</a></li>
+        <li><a href="#why" data-i18n="nav_why">امتیازات</a></li>
+        <li><a href="#admission" data-i18n="nav_admission">داخلہ</a></li>
+        <li><a href="#donation" data-i18n="nav_donation">عطیات</a></li>
+        <li><a href="#contact" data-i18n="nav_contact">رابطہ</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <button class="lang-toggle" id="langToggle" aria-label="Toggle language">English</button>
+      <a href="#admission" class="btn btn-line" data-i18n="nav_apply">داخلہ فارم</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero" id="home">
+  <div class="hero-bg-scroll" aria-hidden="true">
+    <div class="hero-marquee-track">
+      <img src="assets/gallery/photo1.jpg" alt="">
+      <img src="background.png.jpeg" alt="">
+      <img src="logo .jpg" alt="">
+      <img src="assets/gallery/photo4.jpg" alt="">
+      <img src="assets/gallery/photo5.jpg" alt="">
+      <img src="assets/gallery/photo6.jpg" alt="">
+      <img src="assets/gallery/photo7.jpg" alt="">
+      <img src="assets/gallery/photo8.jpg" alt="">
+      <img src="assets/gallery/photo1.jpg" alt="">
+      <img src="assets/gallery/photo2.jpg" alt="">
+      <img src="assets/gallery/photo3.jpg" alt="">
+      <img src="assets/gallery/photo4.jpg" alt="">
+      <img src="assets/gallery/photo5.jpg" alt="">
+      <img src="assets/gallery/photo6.jpg" alt="">
+      <img src="assets/gallery/photo7.jpg" alt="">
+      <img src="assets/gallery/photo8.jpg" alt="">
+    </div>
+  </div>
+  <div class="hero-overlay" aria-hidden="true"></div>
+  <div class="container hero-inner">
+    <img src="logo .jpg" alt="Institute Logo" class="hero-logo">
+    <h1 class="hero-ur-name" data-i18n="hero_ur_name">جامعہ اسلامیہ معہد الابرار</h1>
+    <div class="hero-en-name" data-i18n="hero_en_name">Jamia Islamia Mahadul Abrar</div>
+    <p class="hero-tagline" data-i18n="hero_tagline">قرآن و سنت کی روشنی میں تعلیم و تربیت کا معتبر ادارہ — حفظ، ناظرہ، درس نظامی اور عصری علوم کا حسین امتزاج۔</p>
+    <div class="hero-badges">
+      <span class="badge"><b data-i18n="hero_est_label">قیام:</b> 2015</span>
+      <span class="badge"><b data-i18n="hero_reg_label">رجسٹریشن نمبر:</b> 461</span>
+    </div>
+    <div class="hero-ctas">
+      <a href="#admission" class="btn btn-gold" data-i18n="hero_cta1">داخلہ کھلا ہے</a>
+      <a href="#contact" class="btn btn-outline" data-i18n="hero_cta2">ہم سے رابطہ کریں</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ABOUT ===================== -->
+<section class="about" id="about">
+  <div class="container about-grid">
+    <div class="about-copy">
+      <span class="section-tag" data-i18n="about_tag">تعارف</span>
+      <h2 data-i18n="about_heading">ہمارا مقصد اور مشن</h2>
+      <div class="divider"></div>
+      <p data-i18n="about_p1">جامعہ اسلامیہ معہد الابرار 2015 سے دینی تعلیم و تربیت کے میدان میں مصروفِ عمل ہے۔ ادارہ طلبہ کو قرآن کریم کے حفظ و ناظرہ، تجوید، عربی زبان اور درسِ نظامی کی تعلیم کے ساتھ ساتھ عصری علوم سے بھی آراستہ کرتا ہے تاکہ وہ دین و دنیا دونوں میں کامیاب ہوں۔</p>
+      <p data-i18n="about_p2">ہمارا نصب العین طلبہ کی کردار سازی، اسلامی اقدار کی پاسداری اور معاشرے کی صالح قیادت تیار کرنا ہے۔</p>
+    </div>
+    <div class="about-frame">
+      <blockquote data-i18n="about_quote">"بہترین وہ ہے جو قرآن سیکھے اور سکھائے"</blockquote>
+      <p data-i18n="about_quote_ref" style="font-size:.85rem; margin:0;">— حدیثِ نبویؐ (صحیح بخاری)</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="stats">
+      <div class="stat"><div class="num" data-count="10">0</div><div class="lbl" data-i18n="stat_years">سالوں کا سفر</div></div>
+      <div class="stat"><div class="num" data-count="75">0</div><div class="lbl" data-i18n="stat_students">زیرِ تعلیم طلبہ</div></div>
+      <div class="stat"><div class="num" data-count="30">0</div><div class="lbl" data-i18n="stat_huffaz">فارغ التحصیل حفاظ</div></div>
+      <div class="stat"><div class="num" data-count="10">0</div><div class="lbl" data-i18n="stat_teachers">مستند اساتذہ</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== DEPARTMENTS ===================== -->
+<section class="departments" id="departments">
+  <div class="container">
+    <div class="dep-head">
+      <span class="section-tag" data-i18n="dep_tag">شعبہ جات</span>
+      <h2 data-i18n="dep_heading">ادارے کے تعلیمی شعبے</h2>
+      <div class="divider"></div>
+      <p style="color:#cfe0d3;" data-i18n="dep_sub">ہر طالب علم کی صلاحیت کے مطابق مرحلہ وار نصاب، تجربہ کار اساتذہ کی نگرانی میں۔</p>
+    </div>
+
+    <div class="dep-grid">
+      <div class="dep-card">
+        <div class="dep-icon">☪</div>
+        <h3 data-i18n="dep1_title">Hifz-ul-Qur'an</h3>
+        <span class="ur-sub" data-i18n="dep1_ur">شعبہ حفظ القرآن</span>
+        <p data-i18n="dep1_desc">قرآن کریم کے مکمل حفظ کے لیے منظم و مرحلہ وار پروگرام، روزانہ کی نگرانی کے ساتھ۔</p>
+      </div>
+      <div class="dep-card">
+        <div class="dep-icon">📖</div>
+        <h3 data-i18n="dep2_title">Nazra & Tajweed</h3>
+        <span class="ur-sub" data-i18n="dep2_ur">شعبہ ناظرہ و تجوید</span>
+        <p data-i18n="dep2_desc">قرآن مجید کی صحیح تلاوت اور قواعدِ تجوید کی بنیادی سے اعلیٰ سطح تک تعلیم۔</p>
+      </div>
+      <div class="dep-card">
+        <div class="dep-icon">🕌</div>
+        <h3 data-i18n="dep3_title">Dars-e-Nizami</h3>
+        <span class="ur-sub" data-i18n="dep3_ur">شعبہ درسِ نظامی</span>
+        <p data-i18n="dep3_desc">فقہ، حدیث، تفسیر اور عربی ادب پر مشتمل جامع عالمیت کورس۔</p>
+      </div>
+      <div class="dep-card">
+        <div class="dep-icon">✎</div>
+        <h3 data-i18n="dep4_title">Arabic Language</h3>
+        <span class="ur-sub" data-i18n="dep4_ur">شعبہ زبانِ عربی</span>
+        <p data-i18n="dep4_desc">گفتگو اور تحریر میں مہارت کے لیے جدید طرزِ تدریس سے عربی زبان کی تعلیم۔</p>
+      </div>
+      <div class="dep-card">
+        <div class="dep-icon">✒</div>
+        <h3 data-i18n="dep5_title">Islamic Studies</h3>
+        <span class="ur-sub" data-i18n="dep5_ur">شعبہ اسلامیات</span>
+        <p data-i18n="dep5_desc">عقائد، سیرتِ طیبہؐ اور اسلامی تاریخ پر مبنی اخلاقی و فکری تربیت۔</p>
+      </div>
+      <div class="dep-card">
+        <div class="dep-icon">🖥</div>
+        <h3 data-i18n="dep6_title">Modern Education</h3>
+        <span class="ur-sub" data-i18n="dep6_ur">شعبہ عصری علوم</span>
+        <p data-i18n="dep6_desc">انگریزی، ریاضی اور کمپیوٹر کی بنیادی تعلیم تاکہ طلبہ ہر میدان میں کامیاب ہوں۔</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== WHY US ===================== -->
+<section class="why" id="why">
+  <div class="container">
+    <span class="section-tag" data-i18n="why_tag">امتیازات</span>
+    <h2 data-i18n="why_heading">جامعہ الابرار کیوں منتخب کریں؟</h2>
+    <div class="divider"></div>
+
+    <div class="why-grid">
+      <div class="why-item">
+        <span class="why-num">۰۱</span>
+        <h4 data-i18n="why1_title">مستند اساتذہ</h4>
+        <p data-i18n="why1_desc">تجربہ کار اور مستند علمائے کرام کی زیرِ نگرانی تعلیم و تربیت۔</p>
+      </div>
+      <div class="why-item">
+        <span class="why-num">۰۲</span>
+        <h4 data-i18n="why2_title">رہائشی سہولت</h4>
+        <p data-i18n="why2_desc">دور دراز علاقوں کے طلبہ کے لیے محفوظ اور آرام دہ رہائش گاہ۔</p>
+      </div>
+      <div class="why-item">
+        <span class="why-num">۰۳</span>
+        <h4 data-i18n="why3_title">مفت تعلیم</h4>
+        <p data-i18n="why3_desc">مستحق طلبہ کے لیے تعلیم، رہائش اور خوراک بلا معاوضہ فراہم کی جاتی ہے۔</p>
+      </div>
+      <div class="why-item">
+        <span class="why-num">۰۴</span>
+        <h4 data-i18n="why4_title">جدید نصاب</h4>
+        <p data-i18n="why4_desc">دینی علوم کے ساتھ عصری مضامین کا متوازن اور جامع نصاب۔</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ADMISSION ===================== -->
+<section class="admission" id="admission">
+  <div class="container adm-grid">
+    <div>
+      <span class="section-tag" data-i18n="adm_tag">داخلہ</span>
+      <h2 data-i18n="adm_heading">داخلہ کا طریقہ کار</h2>
+      <div class="divider"></div>
+      <p data-i18n="adm_sub">نیا تعلیمی سال شروع ہو چکا ہے۔ درج ذیل مراحل مکمل کر کے اپنا داخلہ فارم جمع کروائیں۔</p>
+
+      <div class="adm-steps">
+        <div class="adm-step">
+          <div class="n">۱</div>
+          <div><h4 data-i18n="adm_s1_title">فارم پُر کریں</h4><p data-i18n="adm_s1_desc">دائیں جانب دیا گیا آن لائن فارم مکمل معلومات کے ساتھ پُر کریں۔</p></div>
+        </div>
+        <div class="adm-step">
+          <div class="n">۲</div>
+          <div><h4 data-i18n="adm_s2_title">رابطہ کی تصدیق</h4><p data-i18n="adm_s2_desc">ہماری ٹیم آپ سے فون یا ای میل کے ذریعے رابطہ کرے گی۔</p></div>
+        </div>
+        <div class="adm-step">
+          <div class="n">۳</div>
+          <div><h4 data-i18n="adm_s3_title">داخلہ ٹیسٹ / انٹرویو</h4><p data-i18n="adm_s3_desc">مختصر تعارفی نشست کے بعد طالب علم کی جماعت کا تعین کیا جائے گا۔</p></div>
+        </div>
+        <div class="adm-step">
+          <div class="n">۴</div>
+          <div><h4 data-i18n="adm_s4_title">داخلہ کی تکمیل</h4><p data-i18n="adm_s4_desc">ضروری کاغذات جمع کروا کر باقاعدہ داخلہ مکمل کریں۔</p></div>
+        </div>
+        <div class="submit-row">
+        <a href="https://forms.gle/R2kigoK7QsrbuGzG7" type="submit" class="btn btn-gold" data-i18n="f_submit">فارم جمع کروائیں</a>
+    </div>
+      </div>
+    </div>
+  </div>
+  
+      <div class="form-msg" id="formMsg"></div>
+</section>
+
+<!-- ===================== DONATION ===================== -->
+<section class="donation" id="donation">
+  <div class="container donation-grid">
+    <div>
+      <span class="section-tag" data-i18n="don_tag">عطیات</span>
+      <h2 data-i18n="don_heading">جامعہ الابرار میں عطیہ کریں</h2>
+      <div class="divider"></div>
+      <p data-i18n="don_p1">آپ کا ایک ایک روپیہ ہمارے یتیم و مستحق طلبہ کی تعلیم، رہائش اور خوراک پر خرچ ہوتا ہے۔ آج ہی صدقہ جاریہ کا حصہ بنیں۔</p>
+      <div class="donation-points">
+        <div class="donation-point"><span class="dot"></span><p data-i18n="don_p2">QR کوڈ اسکین کر کے فوری اور محفوظ عطیہ کریں۔</p></div>
+        <div class="donation-point"><span class="dot"></span><p data-i18n="don_p3">آپ کا عطیہ براہِ راست طلبہ کی تعلیم پر خرچ کیا جاتا ہے۔</p></div>
+        <div class="donation-point"><span class="dot"></span><p data-i18n="don_p4">مزید تفصیلات کے لیے ادارے سے رابطہ کریں۔</p></div>
+      </div>
+    </div>
+    <div class="qr-card">
+      <img src="madarsaQR.jpeg" alt="Donation QR Code">
+      <h4 data-i18n="don_qr_title">عطیہ کے لیے اسکین کریں<br><br>
+QR کوڈ اسکین کرکے عطیہ کریں۔ عطیہ کرنے کے بعد<br>8855987237<br> نمبر پر WhatsApp کے ذریعے ادائیگی کی رسید کا اسکرین شاٹ بھیج دیں، تاکہ جامعہ کی جانب سے آپ کو عطیہ کی رسید فراہم کی جا سکے۔</h4>
+      <p data-i18n="don_qr_sub">Scan to Donate</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CONTACT ===================== -->
+<section class="contact" id="contact">
+  <div class="container contact-grid">
+    <div>
+      <span class="section-tag" data-i18n="contact_tag">رابطہ</span>
+      <h2 data-i18n="contact_heading">ہم سے رابطہ کریں</h2>
+      <div class="divider"></div>
+      <p data-i18n="contact_sub">داخلہ، تعاون یا کسی بھی معلومات کے لیے درج ذیل ذرائع سے ہم سے رابطہ کیا جا سکتا ہے۔</p>
+
+      <div class="contact-list">
+        <div class="contact-item">
+          <div class="ic">📍</div>
+          <div><h4 data-i18n="c_addr_title">پتہ</h4><p data-i18n="c_addr_body">جامعہ اسلامیہ معہد الابرار، شیو روڈ، ترودا BK، ناندیڑ، مہاراشٹر، انڈیا</p></div>
+        </div>
+        <div class="contact-item">
+          <div class="ic">☎</div>
+          <div><h4 data-i18n="c_phone_title">فون</h4><p data-i18n="c_phone_body">8855987237 91+</p></div>
+        </div>
+        <div class="contact-item">
+          <div class="ic">✉</div>
+          <div><h4 data-i18n="c_mail_title">ای میل</h4><p data-i18n="c_mail_body">jamiya.islamiya.mahadul.abrar.nanded@gmail.com</p></div>
+        </div>
+        <div class="contact-item">
+          <div class="ic">🕐</div>
+          <div><h4 data-i18n="c_time_title">اوقاتِ کار</h4><p data-i18n="c_time_body">ہفتہ تا جمعرات — صبح ۸ تا شام ۵ بجے</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="map-block">
+      <iframe
+        src="https://www.google.com/maps?q=19.2029186,77.3189764&hl=en&z=16&output=embed"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Jamia Islamia Location Map">
+      </iframe>
+      <div class="map-caption">
+        <p data-i18n="map_desc">مکمل راستے کے لیے نیچے دیے گئے بٹن پر کلک کریں یا سیدھا وزٹ کریں۔</p>
+        <a class="btn btn-gold" href="https://maps.app.goo.gl/JdH7M6WmS99ZsfLF6" target="_blank" rel="noopener" data-i18n="map_btn">Google Maps پر دیکھیں</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="logo .jpg" alt="Logo">
+        <div>
+          <span class="ur" data-i18n="footer_ur_name">جامعہ اسلامیہ معہد الابرار</span>
+          <h4 data-i18n="footer_en_name">Jamia Islamia Mahadul Abrar</h4>
+          <p data-i18n="footer_desc">قرآن و سنت کی روشنی میں تعلیم و تربیت کا معتبر ادارہ — قائم شدہ 2015، رجسٹریشن نمبر 461۔</p>
+        </div>
+      </div>
+      <div>
+        <h5 data-i18n="footer_links_title">فوری روابط</h5>
+        <ul>
+          <li><a href="#about" data-i18n="nav_about">تعارف</a></li>
+          <li><a href="#departments" data-i18n="nav_departments">شعبہ جات</a></li>
+          <li><a href="#admission" data-i18n="nav_admission">داخلہ</a></li>
+          <li><a href="#contact" data-i18n="nav_contact">رابطہ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 data-i18n="footer_contact_title">رابطہ کی معلومات</h5>
+        <ul>
+          <li> 8855987237 91+</li>
+          <li>jamiya.islamiya.mahadul.abrar.nanded@gmail.com</li>
+          <li data-i18n="c_time_body">ہفتہ تا جمعرات — صبح ۸ تا شام ۵ بجے</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span data-i18n="footer_copy">© 2026 جامعہ اسلامیہ معہد الابرار — جملہ حقوق محفوظ ہیں</span>
+      <span data-i18n="footer_reg">Reg. No. 461 · Est. 2015</span>
+      <sp>Developed by <br><b>shaikh shakir</b> <br>: Contact No  <br><b>7820804107</b><br>: Email ID  <br><B>shakir.soft.dev@gmail.com</B> </span>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ============ TRANSLATIONS ============ */
+const translations = {
+  brand_ur:{ur:"جامعہ اسلامیہ معہد الابرار",en:"Jamia Islamia Mahadul Abrar"},
+  brand_en:{ur:"Jamia Islamia Mahadul Abrar",en:"Jamia Islamia Mahadul Abrar"},
+  nav_home:{ur:"ہوم",en:"Home"},
+  nav_about:{ur:"تعارف",en:"About"},
+  nav_departments:{ur:"شعبہ جات",en:"Departments"},
+  nav_why:{ur:"امتیازات",en:"Why Us"},
+  nav_admission:{ur:"داخلہ",en:"Admission"},
+  nav_donation:{ur:"عطیات",en:"Donate"},
+  nav_contact:{ur:"رابطہ",en:"Contact"},
+  nav_apply:{ur:"داخلہ فارم",en:"Apply Now"},
+
+  hero_ur_name:{ur:"جامعہ اسلامیہ معہد الابرار",en:"جامعہ اسلامیہ معہد الابرار"},
+  hero_en_name:{ur:"Jamia Islamia Mahadul Abrar",en:"Jamia Islamia Mahadul Abrar"},
+  hero_tagline:{ur:"قرآن و سنت کی روشنی میں تعلیم و تربیت کا معتبر ادارہ — حفظ، ناظرہ، درس نظامی اور عصری علوم کا حسین امتزاج۔",
+                en:"A trusted seminary rooted in the Qur'an and Sunnah — combining Hifz, Nazra, Dars-e-Nizami and modern education."},
+  hero_est_label:{ur:"قیام:",en:"Established:"},
+  hero_reg_label:{ur:"رجسٹریشن نمبر:",en:"Reg. No.:"},
+  hero_cta1:{ur:"داخلہ کھلا ہے",en:"Admissions Open"},
+  hero_cta2:{ur:"ہم سے رابطہ کریں",en:"Contact Us"},
+
+  about_tag:{ur:"تعارف",en:"About Us"},
+  about_heading:{ur:"ہمارا مقصد اور مشن",en:"Our Purpose & Mission"},
+  about_p1:{ur:"جامعہ اسلامیہ معہد الابرار 2015 سے دینی تعلیم و تربیت کے میدان میں مصروفِ عمل ہے۔ ادارہ طلبہ کو قرآن کریم کے حفظ و ناظرہ، تجوید، عربی زبان اور درسِ نظامی کی تعلیم کے ساتھ ساتھ عصری علوم سے بھی آراستہ کرتا ہے تاکہ وہ دین و دنیا دونوں میں کامیاب ہوں۔",
+             en:"Since 2015, Jamia Islamia Mahadul Abrar has been dedicated to Islamic education and character building. The institute equips students with Hifz, Nazra, Tajweed, Arabic and Dars-e-Nizami alongside modern subjects, preparing them for success in both faith and worldly life."},
+  about_p2:{ur:"ہمارا نصب العین طلبہ کی کردار سازی، اسلامی اقدار کی پاسداری اور معاشرے کی صالح قیادت تیار کرنا ہے۔",
+             en:"Our mission is to shape strong character, uphold Islamic values, and raise principled leaders for society."},
+  about_quote:{ur:'"بہترین وہ ہے جو قرآن سیکھے اور سکھائے"',en:'"The best among you is the one who learns the Qur\'an and teaches it."'},
+  about_quote_ref:{ur:"— حدیثِ نبویؐ (صحیح بخاری)",en:"— Hadith of the Prophet ﷺ (Sahih al-Bukhari)"},
+
+  stat_years:{ur:"سالوں کا سفر",en:"Years of Service"},
+  stat_students:{ur:"زیرِ تعلیم طلبہ",en:"Enrolled Students"},
+  stat_huffaz:{ur:"فارغ التحصیل حفاظ",en:"Graduated Huffaz"},
+  stat_teachers:{ur:"مستند اساتذہ",en:"Qualified Teachers"},
+
+  dep_tag:{ur:"شعبہ جات",en:"Departments"},
+  dep_heading:{ur:"ادارے کے تعلیمی شعبے",en:"Our Academic Departments"},
+  dep_sub:{ur:"ہر طالب علم کی صلاحیت کے مطابق مرحلہ وار نصاب، تجربہ کار اساتذہ کی نگرانی میں۔",
+           en:"A structured curriculum tailored to each student's level, guided by experienced teachers."},
+
+  dep1_title:{ur:"شعبہ حفظ القرآن",en:"Hifz-ul-Qur'an"},
+  dep1_ur:{ur:"شعبہ حفظ القرآن",en:"شعبہ حفظ القرآن"},
+  dep1_desc:{ur:"قرآن کریم کے مکمل حفظ کے لیے منظم و مرحلہ وار پروگرام، روزانہ کی نگرانی کے ساتھ۔",
+             en:"A structured, stage-wise program for complete memorization of the Qur'an with daily supervision."},
+
+  dep2_title:{ur:"شعبہ ناظرہ و تجوید",en:"Nazra & Tajweed"},
+  dep2_ur:{ur:"شعبہ ناظرہ و تجوید",en:"شعبہ ناظرہ و تجوید"},
+  dep2_desc:{ur:"قرآن مجید کی صحیح تلاوت اور قواعدِ تجوید کی بنیادی سے اعلیٰ سطح تک تعلیم۔",
+             en:"Correct Qur'anic recitation and the rules of Tajweed, taught from beginner to advanced level."},
+
+  dep3_title:{ur:"شعبہ درسِ نظامی",en:"Dars-e-Nizami"},
+  dep3_ur:{ur:"شعبہ درسِ نظامی",en:"شعبہ درسِ نظامی"},
+  dep3_desc:{ur:"فقہ، حدیث، تفسیر اور عربی ادب پر مشتمل جامع عالمیت کورس۔",
+             en:"A comprehensive Aalimiyat course covering Fiqh, Hadith, Tafsir and Arabic literature."},
+
+  dep4_title:{ur:"شعبہ زبانِ عربی",en:"Arabic Language"},
+  dep4_ur:{ur:"شعبہ زبانِ عربی",en:"شعبہ زبانِ عربی"},
+  dep4_desc:{ur:"گفتگو اور تحریر میں مہارت کے لیے جدید طرزِ تدریس سے عربی زبان کی تعلیم۔",
+             en:"Arabic language taught through modern methods, building fluency in both speech and writing."},
+
+  dep5_title:{ur:"شعبہ اسلامیات",en:"Islamic Studies"},
+  dep5_ur:{ur:"شعبہ اسلامیات",en:"شعبہ اسلامیات"},
+  dep5_desc:{ur:"عقائد، سیرتِ طیبہؐ اور اسلامی تاریخ پر مبنی اخلاقی و فکری تربیت۔",
+             en:"Moral and intellectual grounding through Aqeedah, the Seerah of the Prophet ﷺ, and Islamic history."},
+
+  dep6_title:{ur:"شعبہ عصری علوم",en:"Modern Education"},
+  dep6_ur:{ur:"شعبہ عصری علوم",en:"شعبہ عصری علوم"},
+  dep6_desc:{ur:"انگریزی، ریاضی اور کمپیوٹر کی بنیادی تعلیم تاکہ طلبہ ہر میدان میں کامیاب ہوں۔",
+             en:"Core English, Mathematics and Computer literacy so students succeed in every field."},
+
+  why_tag:{ur:"امتیازات",en:"Why Choose Us"},
+  why_heading:{ur:"جامعہ الابرار کیوں منتخب کریں؟",en:"Why Choose Jamia Abrar?"},
+  why1_title:{ur:"مستند اساتذہ",en:"Qualified Faculty"},
+  why1_desc:{ur:"تجربہ کار اور مستند علمائے کرام کی زیرِ نگرانی تعلیم و تربیت۔",en:"Guided instruction under experienced, certified scholars."},
+  why2_title:{ur:"رہائشی سہولت",en:"Boarding Facility"},
+  why2_desc:{ur:"دور دراز علاقوں کے طلبہ کے لیے محفوظ اور آرام دہ رہائش گاہ۔",en:"Safe, comfortable accommodation for students from distant areas."},
+  why3_title:{ur:"مفت تعلیم",en:"Free Education"},
+  why3_desc:{ur:"مستحق طلبہ کے لیے تعلیم، رہائش اور خوراک بلا معاوضہ فراہم کی جاتی ہے۔",en:"Tuition, boarding and meals provided free of cost for deserving students."},
+  why4_title:{ur:"جدید نصاب",en:"Balanced Curriculum"},
+  why4_desc:{ur:"دینی علوم کے ساتھ عصری مضامین کا متوازن اور جامع نصاب۔",en:"Religious sciences combined with modern subjects in one balanced curriculum."},
+
+  adm_tag:{ur:"داخلہ",en:"Admission"},
+  adm_heading:{ur:"داخلہ کا طریقہ کار",en:"How Admission Works"},
+  adm_sub:{ur:"نیا تعلیمی سال شروع ہو چکا ہے۔ درج ذیل مراحل مکمل کر کے اپنا داخلہ فارم جمع کروائیں۔",
+           en:"The new academic year has begun. Complete the steps below to submit your admission form."},
+  adm_s1_title:{ur:"فارم پُر کریں",en:"Fill the Form"},
+  adm_s1_desc:{ur:"دائیں جانب دیا گیا آن لائن فارم مکمل معلومات کے ساتھ پُر کریں۔",en:"Complete the online form alongside with accurate details."},
+  adm_s2_title:{ur:"رابطہ کی تصدیق",en:"Confirmation Call"},
+  adm_s2_desc:{ur:"ہماری ٹیم آپ سے فون یا ای میل کے ذریعے رابطہ کرے گی۔",en:"Our team will reach out to you by phone or email."},
+  adm_s3_title:{ur:"داخلہ ٹیسٹ / انٹرویو",en:"Assessment / Interview"},
+  adm_s3_desc:{ur:"مختصر تعارفی نشست کے بعد طالب علم کی جماعت کا تعین کیا جائے گا۔",en:"A short introductory session decides the student's appropriate level."},
+  adm_s4_title:{ur:"داخلہ کی تکمیل",en:"Complete Enrollment"},
+  adm_s4_desc:{ur:"ضروری کاغذات جمع کروا کر باقاعدہ داخلہ مکمل کریں۔",en:"Submit the required documents to finalize enrollment."},
+
+  f_student_name:{ur:"طالب علم کا نام",en:"Student's Name"},
+  f_father_name:{ur:"والد کا نام",en:"Father's Name"},
+  f_phone:{ur:"فون نمبر",en:"Phone Number"},
+  f_class:{ur:"داخلہ برائے شعبہ",en:"Department Applying For"},
+  f_class_opt0:{ur:"شعبہ منتخب کریں",en:"Select Department"},
+  f_class_opt1:{ur:"حفظ القرآن",en:"Hifz-ul-Qur'an"},
+  f_class_opt2:{ur:"ناظرہ و تجوید",en:"Nazra & Tajweed"},
+  f_class_opt3:{ur:"درسِ نظامی",en:"Dars-e-Nizami"},
+  f_class_opt4:{ur:"زبانِ عربی",en:"Arabic Language"},
+  f_class_opt5:{ur:"عصری علوم",en:"Modern Education"},
+  f_msg:{ur:"اضافی تفصیل (اختیاری)",en:"Additional Notes (optional)"},
+  f_submit:{ur:"فارم جمع کروائیں",en:"Submit Application"},
+
+  don_tag:{ur:"عطیات",en:"Donation"},
+  don_heading:{ur:"جامعہ الابرار میں عطیہ کریں",en:"Donate to Jamia Abrar"},
+  don_p1:{ur:"آپ کا ایک ایک روپیہ ہمارے یتیم و مستحق طلبہ کی تعلیم، رہائش اور خوراک پر خرچ ہوتا ہے۔ آج ہی صدقہ جاریہ کا حصہ بنیں۔",
+          en:"Every rupee you give supports the education, boarding and meals of our orphan and deserving students. Become part of this ongoing charity today."},
+  don_p2:{ur:"QR کوڈ اسکین کر کے فوری اور محفوظ عطیہ کریں۔",en:"Scan the QR code to donate instantly and securely."},
+  don_p3:{ur:"آپ کا عطیہ براہِ راست طلبہ کی تعلیم پر خرچ کیا جاتا ہے۔",en:"Your donation goes directly toward students' education."},
+  don_p4:{ur:"مزید تفصیلات کے لیے ادارے سے رابطہ کریں۔",en:"Contact the institute for further details."},
+  don_qr_title:{ur:"عطیہ کے لیے اسکین کریں",en:"Scan to Donate"},
+  don_qr_sub:{ur:"Scan to Donate",en:"عطیہ کے لیے اسکین کریں"},
+
+  contact_tag:{ur:"رابطہ",en:"Contact"},
+  contact_heading:{ur:"ہم سے رابطہ کریں",en:"Get in Touch"},
+  contact_sub:{ur:"داخلہ، تعاون یا کسی بھی معلومات کے لیے درج ذیل ذرائع سے ہم سے رابطہ کیا جا سکتا ہے۔",
+               en:"For admissions, donations, or any inquiry, reach us through the details below."},
+  c_addr_title:{ur:"پتہ",en:"Address"},
+  c_addr_body:{ur:"جامعہ اسلامیہ معہد الابرار، مرکزی روڈ، (اپنا مکمل پتہ یہاں درج کریں)، پاکستان",
+               en:"Jamia Islamia Mahadul Abrar, Main Road, (add your full address here), Pakistan"},
+  c_phone_title:{ur:"فون",en:"Phone"},
+  c_phone_body:{ur:"+92 300 0000000",en:"+92 300 0000000"},
+  c_mail_title:{ur:"ای میل",en:"Email"},
+  c_mail_body:{ur:"info@jamiaabrar.edu.pk",en:"info@jamiaabrar.edu.pk"},
+  c_time_title:{ur:"اوقاتِ کار",en:"Office Hours"},
+  c_time_body:{ur:"ہفتہ تا جمعرات — صبح ۸ تا شام ۵ بجے",en:"Saturday to Thursday — 8:00 AM to 5:00 PM"},
+  map_title:{ur:"ہمارا مقام",en:"Find Us"},
+  map_desc:{ur:"مکمل راستے کے لیے نیچے دیے گئے بٹن پر کلک کریں یا سیدھا وزٹ کریں۔",
+            en:"Click the button below for full directions, or visit us in person."},
+  map_btn:{ur:"Google Maps پر دیکھیں",en:"View on Google Maps"},
+
+  footer_ur_name:{ur:"جامعہ اسلامیہ معہد الابرار",en:"جامعہ اسلامیہ معہد الابرار"},
+  footer_en_name:{ur:"Jamia Islamia Mahadul Abrar",en:"Jamia Islamia Mahadul Abrar"},
+  footer_desc:{ur:"قرآن و سنت کی روشنی میں تعلیم و تربیت کا معتبر ادارہ — قائم شدہ 2015، رجسٹریشن نمبر 461۔",
+               en:"A trusted institute of Islamic education rooted in the Qur'an and Sunnah — established 2015, Reg. No. 461."},
+  footer_links_title:{ur:"فوری روابط",en:"Quick Links"},
+  footer_contact_title:{ur:"رابطہ کی معلومات",en:"Contact Info"},
+  footer_copy:{ur:"© 2026 جامعہ اسلامیہ معہد الابرار — جملہ حقوق محفوظ ہیں",en:"© 2026 Jamia Islamia Mahadul Abrar — All rights reserved"},
+  footer_reg:{ur:"رجسٹریشن نمبر 461 · قیام 2015",en:"Reg. No. 461 · Est. 2015"}
+};
+
+let currentLang = 'ur';
+
+function applyLanguage(lang){
+  currentLang = lang;
+  const html = document.documentElement;
+  html.setAttribute('lang', lang === 'ur' ? 'ur' : 'en');
+  html.setAttribute('dir', lang === 'ur' ? 'rtl' : 'ltr');
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    const key = el.getAttribute('data-i18n');
+    if(translations[key]){
+      el.textContent = translations[key][lang];
+    }
+  });
+  document.getElementById('langToggle').textContent = lang === 'ur' ? 'English' : 'اردو';
+}
+
+document.getElementById('langToggle').addEventListener('click', ()=>{
+  applyLanguage(currentLang === 'ur' ? 'en' : 'ur');
+});
+
+/* ============ MOBILE MENU ============ */
+const menuBtn = document.getElementById('menuBtn');
+const primaryNav = document.getElementById('primaryNav');
+menuBtn.addEventListener('click', ()=>{
+  primaryNav.classList.toggle('open');
+});
+primaryNav.querySelectorAll('a').forEach(a=>{
+  a.addEventListener('click', ()=> primaryNav.classList.remove('open'));
+});
+
+/* ============ HEADER SCROLL SHADOW ============ */
+const header = document.getElementById('siteHeader');
+window.addEventListener('scroll', ()=>{
+  header.classList.toggle('scrolled', window.scrollY > 12);
+});
+
+/* ============ ACTIVE NAV LINK ON SCROLL ============ */
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.primary-nav a');
+window.addEventListener('scroll', ()=>{
+  let current = '';
+  sections.forEach(sec=>{
+    const top = sec.offsetTop - 90;
+    if(window.scrollY >= top) current = sec.getAttribute('id');
+  });
+  navLinks.forEach(link=>{
+    link.classList.toggle('active', link.getAttribute('href') === '#' + current);
+  });
+});
+
+/* ============ ANIMATED STAT COUNTERS ============ */
+const counters = document.querySelectorAll('.stat .num');
+let countersStarted = false;
+
+function animateCounters(){
+  if(countersStarted) return;
+  countersStarted = true;
+  counters.forEach(counter=>{
+    const target = parseInt(counter.getAttribute('data-count'), 10);
+    const duration = 1400;
+    const start = performance.now();
+    function tick(now){
+      const progress = Math.min((now - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      counter.textContent = Math.floor(eased * target);
+      if(progress < 1) requestAnimationFrame(tick);
+      else counter.textContent = target;
+    }
+    requestAnimationFrame(tick);
+  });
+}
+
+const statsObserver = new IntersectionObserver((entries)=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting) animateCounters();
+  });
+}, {threshold:0.4});
+const statsBlock = document.querySelector('.stats');
+if(statsBlock) statsObserver.observe(statsBlock);
+
+/* ============ ADMISSION FORM VALIDATION ============ */
+const form = document.getElementById('admissionForm');
+const formMsg = document.getElementById('formMsg');
+
+form.addEventListener('submit', (e)=>{
+  e.preventDefault();
+  const studentName = document.getElementById('studentName').value.trim();
+  const fatherName = document.getElementById('fatherName').value.trim();
+  const phone = document.getElementById('phone').value.trim();
+  const classFor = document.getElementById('classFor').value;
+
+  const phonePattern = /^[0-9+\-\s]{7,15}$/;
+
+  if(!studentName || !fatherName || !phone || !classFor){
+    showFormMsg(currentLang === 'ur'
+      ? 'براہِ کرم تمام لازمی خانے مکمل کریں۔'
+      : 'Please fill in all required fields.', false);
+    return;
+  }
+  if(!phonePattern.test(phone)){
+    showFormMsg(currentLang === 'ur'
+      ? 'براہِ کرم درست فون نمبر درج کریں۔'
+      : 'Please enter a valid phone number.', false);
+    return;
+  }
+
+  showFormMsg(currentLang === 'ur'
+    ? `شکریہ ${studentName}، آپ کا داخلہ فارم موصول ہو گیا ہے۔ ہماری ٹیم جلد رابطہ کرے گی۔`
+    : `Thank you, ${studentName}. Your application has been received. Our team will contact you soon.`, true);
+
+  form.reset();
+});
+
+function showFormMsg(text, ok){
+  formMsg.textContent = text;
+  formMsg.className = 'form-msg show ' + (ok ? 'ok' : 'err');
+}
+
+/* init */
+applyLanguage('ur');
+</script>
+</body>
+</html>
